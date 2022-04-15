@@ -1,0 +1,23 @@
+.size{
+    font-size: 500%;
+    font-style: italic;
+    border: 1cm black;
+
+    
+}
+.word-spacing{
+    word-spacing: 1cm;
+
+}
+.letter{
+    letter-spacing: 0.5cm;
+}
+.dummy{
+    text-align: center;
+    font-size: x-large;
+    color: aquamarine;
+}
+body{
+    background-color: yellowgreen;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    
+    <title>Document</title>
+    <style>
+        #colored{
+            color: aquamarine;
+
+        }
+        .color{
+            color: chartreuse;
+            text-align: center;
+        }
+        .className p {
+            background-color: blue;
+
+        }
+        .childSelector>p{
+           background-color: green;
+        }
+        .pseudo::first-line{
+            color: cornflowerblue;
+            font-variant: small-caps;
+        }
+        .pseudo::first-letter{
+            background-color: red;
+            font-size: xx-large;
+            font-style: oblique;
+        }
+        /* .before::after{ */
+            /* content: url("img.jpg.jpg" ); */
+        /* } */
+        input[type=text]{
+            width: 150px;
+           display: block;
+            margin-bottom: 10px;
+          background-color: rgb(75, 221, 204);
+           }
+           input[type=button]{
+               width:auto;
+               display: inline;
+               background-color: crimson;
+           }
+    </style>
+</head>
+<body>
+    <h1 id="colored">Welcome to CSS</h1>
+    <h2 class="color">Hey There</h2>
+    <section class="className">
+       <p> first p</p>
+       <p> second p</p>
+    </section>
+    <p> para pre</p>
+    <div class="childSelector">
+        <p>para p1</p>
+        <div>
+            <p>new para</p>
+        </div>
+        <p>para p2</p>
+    </div>
+    <p>para p3</p>
+    <p>para p4</p>
+    <p class="pseudo">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h1 class="before">
+        Heading
+    </h1>
+    <form action="" method="get">
+        Fistname:
+        <input type="text" name="Name" value="Pankaj" maxlength="20">
+        LastName:
+        <input type="text" name="Name" value="Chauhan" maxlength="20" >
+        <input type="Button" value="Submit">
+    </form>
+</body>
+</html> 

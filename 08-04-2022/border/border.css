@@ -1,0 +1,16 @@
+.example-1{
+    border-width: 3px;
+    border-style:dashed;
+    border-top-style:solid ;
+    border-bottom-color: red;
+    border-top-color: rgb(201, 201, 165);
+    border-left-color: green;
+    border-right-color: blue;
+
+}
+.example-2>span{
+    border-width: 2px;
+    border-style: groove;
+    border-color: aquamarine;
+   
+}

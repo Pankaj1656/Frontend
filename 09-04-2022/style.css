@@ -1,0 +1,40 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap'); */
+body{
+    padding: 1.25em;
+    font-family: "poppins";
+}
+
+table{
+    width: 100%;
+   
+    border: 1px solid #DDD;
+    border-radius: 1em;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+
+
+tr:nth-child(odd){
+    background-color: #ddd;
+}
+td{
+    text-align: left;
+}
+td,th{
+    height: 40px;
+   
+}
+th{
+   
+   
+   text-transform: uppercase;
+   text-align: left;
+    background-color: #215a8e;
+    color: white;
+}
+th,td{
+    padding-left: 1em;
+ 
+}
+

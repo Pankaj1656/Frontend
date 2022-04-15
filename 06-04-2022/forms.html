@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   
+   <title>Forms</title>
+   
+</head>
+<body>
+    <h1>HTML Forms</h1>
+    <form action="/formdata" target="_blank" method="post">
+        <fieldset>
+        <h2>Enter name</h2>
+        <label for="firstname"> First Name: </label>
+        <br>
+        <input type="text" name="firstname" placeholder="Enter your first name">
+        <br>
+        <label for="lastname"> Last Name:</label>
+        <br>
+        <input type="text" name="lastname" placeholder="Enter yout last name">
+        <br>
+        <label for="country code" >Country code:</label>
+        <br>
+        <input type="text" name="country code" placeholder="Country code" pattern="[A-za-z0-9]{3}" title="three letter code">
+        <br> 
+    </fieldset>
+        <fieldset>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" name="email" placeholder="xyz@gmail.com">
+        <br>
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" name="password" autocomplete="off" >
+        <br>
+        <label for="pints">Points</label>
+        <br>
+        <input type="number" id="points" name="points" step="3">
+        <br>
+    </fieldset>
+        <input type="submit" >
+    </form>
+    <form >
+        <label for="Address">Address</label>
+        <br>
+       <input type="text" placeholder="Address">
+      <br>
+      <label for="City">City</label>
+      <br>
+       <input type="text" placeholder="city">
+       <br>
+    </form>
+    <form >
+        <h2>Radio Buttons => Choose 1st and 2nd Fav Language</h2>
+        <input type="radio" id="html" class="radio-btn" name="fav_language" value="htmlLang">
+        <label for="html">HTML</label>
+        <br>
+        <input type="radio" id="css" class="radio-btn" name="fav_language" value="cssLang">
+        <label for="css">Css</label>
+        <br>
+        <input type="radio" id="javascript" class="radio-btn"name="fav_language" >
+        <label for="javascript">Javascript</label>
+        <br>
+    </form>
+    <br>
+    <form >
+        <h2>Check boxes => Choose 0 or more option</h2>
+        <input type="checkbox" id="vehicle1" value="bike" name="vehicle">
+        <label for="vehicle1">I have a bike</label>
+        <br>
+        <input type="checkbox" id="vehicle2" value="car" name="vehicle">
+        <label for="vehicle2">I have a Car</label>
+        <br>
+        <input type="checkbox" id="vehicle3" value="havingBoat" name="vehicle">
+        <label for="vehicle3">I have a boat</label>
+        
+    </form>
+    <br>
+    <form action="/handle-data">
+        <label for="Cars"> Choose</label>
+        <select name="cars" size="1" multiple>
+            <option value="volvo">Volvo Car</option>
+            <option value="Fiat">Fiat car</option>
+            <option value="Audi">Audi car</option>
+            <option value="Bmw">BMW Car</option>
+        </select>
+        <br>
+        <label for="essay">Essay</label>
+        <br>
+        <textarea name="essayText" id="essay" cols="30" rows="10"></textarea>
+        <button type="button">Clear Text Area</button>
+        <input type="Submit">
+    </form>
+</body>
+</html>
