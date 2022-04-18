@@ -1,0 +1,274 @@
+body{
+    display: grid;
+    place-items: center;
+    
+ background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url(apple.jpg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-size: cover 
+}
+
+.image-slider{
+    width: 40%;
+    height: 400px;
+    background-image: url(redapple.jpg);
+    background-size: cover;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    animation: changeImage 20s ease-in-out  infinite ;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    /* z-index: 2; */
+}
+@keyframes changeImage {
+    0%{
+        
+        background-image: url(redapple.jpg);
+    }
+    25%{
+        background-image: url(GRANNY.png);
+    }
+    50%{
+        background-image: url(golden.jpg);
+    }
+    75%{
+        background-image: url(fuji.jpg);
+    }
+    100%{
+        background-image: url(gala.jpg);
+    }
+
+}
+.varity{
+    width: 170px;
+    background-color: seagreen;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+nav{
+    width: 100%;
+    background-color: azure;
+    opacity: 0.8;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center 
+}
+nav .logo{
+    width: 25%; text-align: center
+    
+}
+.my-element{
+    display: inline-block;
+   animation: bounce;
+    animation-duration: 2s;
+    
+}
+/*  */
+nav .menu{
+    width: 40%;
+   
+    display: flex;
+    justify-content: space-around;
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+
+    /* flex-direction: row; */
+    /* background-color:white; */
+    opacity: 0.8;  
+}
+nav .menu a:hover{
+    color: black;
+    background-color: gold;
+    border-radius: 2px;
+}
+nav .menu a{
+    padding: 5px;
+    text-decoration: none;
+    color: #666bbc;
+}
+nav .menu a:first-child{
+    color: aqua;
+}
+.center{
+    font-family:'Square Peg', cursive;
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 80px;
+    color:white;
+    text-transform: uppercase;
+}
+.form{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.heading{
+    display: flex;
+    justify-content:center ;
+    font-family: 'Square Peg', cursive;
+    text-transform: uppercase;
+    font-size: xx-large
+    
+    
+}
+.main {
+margin-top:50px ;
+   
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+   
+    
+}
+.main>a{
+    padding: 12px 20px;
+    /* background-color:aqua; */
+    font-weight: 500;
+    border-radius: 10px;
+    text-transform: uppercase;
+    /*  */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    opacity: 0.9;
+    text-decoration: none;
+    color: azure;
+}
+.main .btnon{
+    margin-right: 20px;
+    background-color: coral;
+   
+}
+.main a:hover{
+    color: white;
+    background-color: #666bbc;
+}
+.main .btnone{
+    margin-right: 20px;
+    background-color: aqua;
+    color: white;
+}
+.main .btntwo{
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+}
+.text{
+    width: 50%;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+   padding-left: 200px;
+   padding-right: 200px;
+   padding-bottom: 30px;
+}
+
+.content{
+    
+    
+    
+    /* margin-left: 50px; */
+ 
+    /* margin-right: 50px; */
+    /* padding-left: 50px; */
+    padding-top: 20px;
+   
+   
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    opacity: 0.8;
+}
+
+
+
+
+.social{
+    margin-left: 8px;
+    color: white;
+    
+}
+.content a{
+    text-decoration: none;
+}
+.brand{
+    padding-left: 20px;
+    color: white;
+    font-size: 30px;
+}
+.content a i:hover{
+    color: red;
+   
+}
+.footer{
+    width: 100%;
+    opacity: 0.7;
+    margin-top: 200px;
+   width: 100%;
+   height: 250px;
+   border-radius: 200px;
+   background-color: seagreen;
+}
+.text1{
+   
+    color: black;
+   
+    text-align: center;
+    font-size: large;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Shadows Into Light', cursive;;
+   /* margin-bottom: 30px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+.layout{
+    background-color: seagreen;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+
+}
+.layout,flex{
+    color: yellow;
+    
+    /* text-transform: uppercase; */
+    
+}
+.flex{
+    padding: 10px;
+    background-color: brown;
+    width: 100px;
+    text-align: center;
+}
+.box1{
+    border: 1px solid red;
+}
+.shadow{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 2px goldenrod, 10px 5px 6px 10px royalblue;
+}
