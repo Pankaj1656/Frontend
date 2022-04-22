@@ -2,6 +2,8 @@ body{
     display: grid;
     place-items: center;
     margin: 0;
+ /* background-image: url(apple.jpg.jpg); */
+
  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url(apple.jpg.jpg);
   background-repeat: no-repeat;
   background-size: 100vh;

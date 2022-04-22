@@ -1,7 +1,7 @@
 body{
     display: grid;
     place-items: center;
-    
+    background-image:  url(image1.jpg); 
  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url(image1.jpg);
   background-repeat: no-repeat;
   background-size: 100vh;
@@ -40,7 +40,7 @@ nav .menu{
 
     /* flex-direction: row; */
     /* background-color:white; */
-    opacity: 0.8;  
+    /* opacity : 0.8;   */
 }
 nav .menu a:hover{
     color: black;
