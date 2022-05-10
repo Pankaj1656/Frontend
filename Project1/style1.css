@@ -1,6 +1,7 @@
 body{
     display: grid;
     place-items: center;
+    margin: 0;
     background-image:  url(image1.jpg); 
  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url(image1.jpg);
   background-repeat: no-repeat;

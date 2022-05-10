@@ -1,0 +1,40 @@
+.container{ 
+   max-width: 400px;
+   margin: 10vh auto 0 auto;
+   box-shadow:0px 0px 43px 17px rgba(153,153,153,1); 
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* border: 1px solid grey; */
+    
+}
+.btn{
+    font-size: 25px;
+    border: 1px solid grey;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+#display{
+    border: 1px solid grey;
+    height: 90px;
+    line-height: 70px;
+    padding: 1;
+    font-size: 25px;
+}
+.btn:hover{
+    background-color:#666bbb;
+    color: azure;
+    transition: 0.5s ease-in-out;
+}
+#equal{
+    background-color: seagreen;
+    color: azure;
+   
+   
+}
+#equal:hover{
+    background-color: red;
+  
+}

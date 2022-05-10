@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+</head>
+
+<body>
+    <!--Javascript functions are defined with the "FUNCTION" keyword-->
+    <p id="intro"></p>
+
+    <script>
+        var x = myfunction(4, 7) * 2;
+        console.log(x);
+        document.getElementById("intro").innerHTML = x;
+
+        function myfunction(a, b) {
+            return a * b;
+        }
+
+        const v = function (a, b) {
+            return a * b;
+        };
+
+        document.getElementById("intro").innerHTML = v(5, 5);
+
+        //   const a = function (a, b) {
+        // return a * b;
+        //   };
+
+        //   let z = a(8, 5);
+        //   document.getElementById("intro").innerHTML = z;
+        //    (function (){
+        //    document.getElementById("intro").innerHTML="hello";
+        //    })();
+
+        const p = (m, n) => m * n;
+        let z = p(5, 7);
+        document.getElementById("intro").innerHTML = z;
+
+        // USE OF "THIS" KEYWORD;
+
+        const obj = {
+            firstName: "Pankaj",
+            LastName: "Chauhan",
+            fullName: function () {
+                return this.firstName + "<br>" + this.LastName;
+            },
+        };
+        document.getElementById("intro").innerHTML = obj.fullName();
+
+        // CALLING A FUNCTION IN OTHER OBJECT;
+
+        const person = {
+            fullName: function () {
+                return this.firstName + " " + this.LastName;
+            },
+        };
+
+        const person1 = {
+            firstName: "Pankaj",
+            LastName: "Chauhan",
+        };
+
+        const person2 = {
+            firstName: "Ambika",
+            LastName: "Raita",
+        };
+
+        document.getElementById("intro").innerHTML =
+            person.fullName.call(person2);
+
+        const person5 = {
+            fullName: function (city, country) {
+                return (
+                    this.firstName + " " + this.LastName + " " + city + " " + country
+                );
+            },
+        };
+        const person15 = {
+            firstName: "Pankaj",
+            LastName: "Chauhan",
+        };
+        const person20 = {
+            firstName: "Ambika",
+            LastName: "Raita",
+        };
+
+        document.getElementById("intro").innerHTML = person5.fullName.call(
+            person20,
+            "Theog",
+            "INDIA"
+        );
+           
+        // APPLY KEYWORD IS SIMILAR TO CALL FUNCTION JUST A DIFFERENCE THAT IN "APPLY" WE TAKE ARGUMENTS IN SQUARE BRACKETS   !!! 
+
+        const person50 = {
+            fullName: function (city, country) {
+                return (
+                    this.firstName + " " + this.LastName + " " + city + " " + country
+                );
+            },
+        };
+        const person6 = {
+            firstName: "Pankaj",
+            LastName: "Chauhan",
+        };
+        const person0 = {
+            firstName: "Ambika",
+            LastName: "Raita",
+        };
+        document.getElementById("intro").innerHTML = person50.fullName.apply(
+            person0,
+            ["Theog",
+            "INDIA"]
+        );
+    </script>
+</body>
+
+</html>

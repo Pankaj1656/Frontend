@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show">
+
+    </p>
+
+    <script>
+        let char =["Mahindra","Tata","Maruti","Jeep"]
+        
+        const str =["Car",
+           23,
+           "pankaj",{
+            firstname:"pankaj",
+            lastnam:"chauhan"},[1,2,3,4]];
+            // console.log(str);
+            // document.getElementById("show").innerHTML=str;
+            char.push("compass")
+            console.log(char);
+            // document.getElementById("show").innerHTML=char;
+            char.pop(1);
+            console.log(char);
+            document.getElementById("show").innerHTML=char;
+           console.log( char.shift());
+            
+
+           let tet="";
+           const arr=[4,5,6,8,9,4,5];
+           arr.forEach(myFunction);
+
+           function myFunction(value,index){
+              tet+=value+" "+index+"<br>";
+           }
+          console.log(tet);
+          document.getElementById("show").innerHTML=tet;
+
+    </script>
+</body>
+</html>

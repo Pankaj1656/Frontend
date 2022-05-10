@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListners</title>
+</head>
+<body>
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"> </p>
+
+    <script>
+        var x=document.getElementById("myBtn");
+        
+        x.addEventListener("mouseover",function () {
+           
+            document.getElementById("demo").innerHTML+="Moused over! <br>"
+        });
+
+        x.addEventListener("click",myFunction1);
+        x.addEventListener("mouseout",myFunction2);
+
+        // function myFunction(){
+            // document.getElementById("demo").innerHTML+="Moused over! <br>"
+        // }
+        function myFunction1(){
+    document.getElementById("demo").innerHTML+="Clicked! <br>"
+        }
+        function myFunction2(){
+    document.getElementById("demo").innerHTML+="Moused out! <br>"
+        }
+    </script>
+</body>
+</html>
