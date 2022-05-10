@@ -1,1 +1,44 @@
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #512aaa;
+    /* background-color: #acb345; */
+}
+.timer{
+    position: absolute;
+    top: 10%;
+    font-size: 45px;
+    color: #f0db4f;
+    font-weight: bold;
+}
+.container{
+    background-color: #f0db4f;
+    width: 700px;
+    max-width: 90%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.quote-display{
+    font-size: larger;
+    margin-bottom: 1rem;
+}
+.quote-input{
+    width: 100%;
+    height: 8rem;
+    background-color:#a1922e ;
+    outline: none;
+    margin: auto;
+    resize: none;
+    padding: 5px;
+}
+.quote-input:focus{
+    border-color: black;
+    
+}

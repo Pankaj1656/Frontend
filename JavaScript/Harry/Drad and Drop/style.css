@@ -1,0 +1,45 @@
+body{
+    background-color: blueviolet;
+    margin: 0;
+    box-sizing: border-box;
+}
+.imgBox{
+    /* background-image: url('me.jpg'); */
+    background-color: aquamarine;
+    position: relative;
+    height: 145px;
+    width: 145px;
+    top: 5px;
+    left: 5px;
+
+}
+
+.clear{
+    background-color: white;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    font-family: cursive;
+    font-size: larger;
+}
+.whitebox{
+    display: inline-block;
+    background-color: white;
+    height: 155px;
+    width: 155px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+.dashed{
+    background-color: yellow;
+}
+.hold{
+    border: solid red 1px;
+}
+.hide{
+    display: none;
+}
