@@ -4,16 +4,14 @@ body{
     box-sizing: border-box;
 }
 .imgBox{
-    /* background-image: url('me.jpg'); */
-    background-color: aquamarine;
+    background-image: url('me2.jpg');
     position: relative;
-    height: 145px;
-    width: 145px;
     top: 5px;
     left: 5px;
-
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
 }
-
 .clear{
     background-color: white;
 }
@@ -24,6 +22,9 @@ body{
     height: inherit;
     font-family: cursive;
     font-size: larger;
+    margin-left:25px ;
+    position: fixed;
+
 }
 .whitebox{
     display: inline-block;
@@ -35,10 +36,10 @@ body{
 
 }
 .dashed{
-    background-color: yellow;
+    background-color: rgb(123, 196, 210);
 }
 .hold{
-    border: solid red 1px;
+    border: solid rgb(42, 37, 37) 2px;
 }
 .hide{
     display: none;
