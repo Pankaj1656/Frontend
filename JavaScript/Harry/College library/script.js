@@ -6,7 +6,7 @@ function Book(name, author, type) {
 }
 
 function Display() {
-  //   document.getElementById("").value;
+   
 }
 
 Display.prototype.add = function (book) {
@@ -36,7 +36,7 @@ Display.prototype.validate = function (book) {
 Display.prototype.show = function (type,displayMessage) {
   let message = document.getElementById("message");
   message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
-                     <strong>Message:</strong> ${displayMessage}
+                     <strong>Message : </strong> ${displayMessage}
                     
                     </div>`; 
                     setTimeout(() => {
@@ -49,7 +49,7 @@ let libraryForm = document.getElementById("libraryForm");
 libraryForm.addEventListener("submit", libraryFormSubmit);
 
 function libraryFormSubmit(e) {
-  console.log("YOu have submitted library form");
+  console.log("You have submitted library form");
   let name = document.getElementById("bookName").value;
   let author = document.getElementById("author").value;
   let type;
@@ -67,6 +67,8 @@ function libraryFormSubmit(e) {
 
   let book = new Book(name, author, type);
   console.log(book);
+
+
   let display = new Display();
 
   if (display.validate(book)) {
