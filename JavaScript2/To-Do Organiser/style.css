@@ -1,0 +1,30 @@
+.container {
+    width: auto;
+	padding: 0;
+  margin: 20px auto;
+}
+
+.outer {
+	height: 100vh;
+}
+
+.outer .col-md-4 {
+	padding: 0;
+}
+.colo{
+    border: 2px solid black;
+    height: 100vh;
+    
+    text-align: center;
+    margin: 20px;
+}
+.colo h1{
+    background-color: aqua;
+    padding: 5px 0;
+    margin: 2px;
+}
+.btn-outer{
+
+  width: 100%; 
+  text-align: center;
+}
