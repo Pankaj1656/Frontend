@@ -1,0 +1,15 @@
+
+.dog{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 40%;
+    
+}
+.dog label{
+    font-size: x-large;
+}
+.dog input{
+    width: 50%;
+}

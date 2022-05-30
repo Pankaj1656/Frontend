@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // class Student {
+    // constructor(name,batch,techstack){
+    // this.name=name;
+    // this.batch=batch;
+    // this.techstack=techstack
+    // }
+    // displayInfo(){
+    // console.log(`${this.name} from ${this.batch} is currently learning ${this.techstack} stack technology.`)
+    // }
+    // }
+    // const me=new Student('Pankaj','Batch-12','MERN')
+    // me.displayInfo();
+
+    class Student {
+      constructor(name, batch, techstack, subjectMarks) {
+        this.name = name;
+        this.batch = batch;
+        this.techstack = techstack;
+        this.subjectMarks = subjectMarks;
+      }
+      displayInfo() {
+        console.log(
+          `${this.name} from ${this.batch} is currently learning ${this.techstack} stack technology.`
+        );
+      }
+      isPass() {
+        let pass = 0;
+        let fail = 0;
+        this.subjectMarks.forEach((item) => {
+          let mark = item.marks;
+          if (mark < 35) {
+            fail++;
+            // console.log(`NOT PASSED in ${item.subject} `)
+          } else {
+            pass++;
+            // console.log(`PASSED IN ${item.subject}`)
+          }
+        });
+        if (fail === 1) {
+          console.log("NOT PASSED");
+        } else {
+          console.log("PASSED");
+        }
+      }
+      calculateAverage() {
+        let total = 0;
+        this.subjectMarks.forEach((item) => {
+          total = total + item.marks;
+        });
+        console.log(`Total marks : ${total}`);
+        const average = total / this.subjectMarks.length;
+        console.log(`Average of Student is : ${average}`);
+      }
+    
+    displayMarks() {
+      this.subjectMarks.forEach((item, index) => {
+        console.log(
+          `[SUBJECT ${index + 1}] ${item.subject} : ${item.marks}`
+        );
+      });
+    }
+    changeTechStack (newTechStack){
+       this.techstack=newTechStack
+    }
+    inputMarks(marksArray){
+
+      this.subjectMarks.forEach((item,index)=>{
+        item.marks=marksArray[index]
+      })
+      
+    }
+  }
+    const pankaj = new Student("Pankaj", "Batch 9", "MERN", [
+      {
+        subject: "Mathematics",
+        marks: 86,
+      },
+      {
+        subject: "Science",
+        marks: 38,
+      },
+      {
+        subject: "Social Science",
+        marks: 65,
+      },
+      {
+        subject: "English",
+        marks: 98,
+      },
+      {
+        subject: "Hindi",
+        marks: 87,
+      },
+    ]);
+
+    pankaj.changeTechStack('MEAN')
+    console.log(pankaj)
+    
+    pankaj.inputMarks([0,0,0,0,0])
+    // pankaj.isPass();
+    // pankaj.displayMarks();
+    // pankaj.calculateAverage();
+  </script>
+</body>
+
+</html>

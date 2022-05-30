@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <script>
+        let AccountBalance = () =>
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+      resolve("[100] Your Account balance is:");
+        }, 10000);
+      });
+      
+        let ShowBalance = () =>
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+      resolve("50000 ");
+        }, 1000);
+      });
+      //   const fetchbalance = async () => {
+      // try {
+      //   const res = await AccountBalance();
+      //   console.log(res);
+      //   console.log("Processing");
+      //   const res2 = await ShowBalance();
+      //   console.log(res2);
+      // } catch (err) {
+      //   console.log(err);
+      // }
+      //   };
+      //   fetchbalance();
+
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise is being resolved");
+        }, 3000);
+        // setTimeout(() => {
+        //   reject("Promise is being rejected");
+        // }, 3000);
+      });
+
+
+     // Promise returns only one value.
+
+      const output = async () => {
+        //    return 'Hello'
+        try {
+            
+          const res = await promise;
+          console.log(res);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      console.log(output());
+    </script>
+  </body>
+</html>

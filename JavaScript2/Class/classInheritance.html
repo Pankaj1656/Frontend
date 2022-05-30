@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(firstName,LastName,age){
+                this.firstName=firstName;
+                this.LastName=LastName;
+                this.age=age;
+            }
+            displayInfo(){
+              return (`${this.firstName} ${this.LastName} is ${this.age} years old.`)
+            }
+        }
+
+        class person2 extends person{
+            constructor(firstName,LastName,age,college,city,number){
+                super(firstName,LastName,age)
+                this.college=college;
+                this.city=city
+                this.number=number
+            }
+             fullInfo(){
+                 console.log(`${this.displayInfo()}  And he did his bachelors's from ${this.college}  he lives in ${this.city} and his contact number is ${this.number}. `)
+                //  console.log(`${this.firstName} ${this.LastName} is ${this.age} years old  and he did his bachlors's from ${this.college}  he lives in ${this.city} and his contact number is ${this.number}. `)
+             }
+
+        }
+
+        const info= new person2('Pankaj','Chauhan',23,'MGGEC (KOTLA)','Shimla',8988063411)
+        
+        console.log(info)
+        info.fullInfo();
+        console.log(info.displayInfo());
+    </script>
+</body>
+</html>
