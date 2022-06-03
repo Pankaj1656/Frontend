@@ -1,4 +1,4 @@
-const productsParentDiv=document.getElementById('products')
+const productsParentDiv = document.getElementById("products");
 // {
 // 	category: "men's clothing"
 // 	description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"
@@ -14,7 +14,7 @@ const createProductDiv = (product) => {
   const productDiv = document.createElement("div");
   const productImg = document.createElement("img");
   const productBody = document.createElement("div");
-  const productHeader = document.createElement('div')
+  const productHeader = document.createElement("div");
   const productTitle = document.createElement("h5");
   const productPrice = document.createElement("h4");
   const productDescription = document.createElement("p");
@@ -28,69 +28,68 @@ const createProductDiv = (product) => {
   const addToCartButton = document.createElement("a");
   const buyButton = document.createElement("a");
 
+  colDiv.classList = "col-md-3";
+  productDiv.classList = "card product";
+  productImg.classList = "card-img-top";
+  productBody.classList = "card-body";
+  productHeader.classList = "product-header";
+  productTitle.classList = "card-title";
+  productPrice.classList = "card-title product-price";
+  productDescription.classList = "card-text";
+  ratingStar1.classList = "fa fa-star checked";
+  ratingStar2.classList = "fa fa-star checked";
+  ratingStar3.classList = "fa fa-star checked";
+  ratingStar4.classList = "fa fa-star checked";
+  ratingStar5.classList = "fa fa-star checked";
+  ratingCount.classList = "rating-count";
+  cardButtonOuter.classList = "btn-outer";
+  addToCartButton.classList = "btn btn-primary addToCart-btn";
+  buyButton.classList = "btn btn-primary buy-btn";
+
+  colDiv.id = `product-${product.id}`;
+
+  productTitle.innerText = `${product.title.slice(0, 20)}...`;
+  productPrice.innerText = `$${product.price}`;
+  productDescription.innerText = `${product.description.slice(0, 55)}...`;
+  ratingCount.innerText = `(${product.rating.count})`;
+  addToCartButton.innerText = "Add to Cart";
+  buyButton.innerText = "Buy now";
+
+  productImg.src = product.image;
+  productImg.alt = "product-img";
+
+  colDiv.appendChild(productDiv);
+  productDiv.appendChild(productImg);
+  productDiv.appendChild(productBody);
+  productBody.appendChild(productHeader);
+  productHeader.appendChild(productTitle);
+  productHeader.appendChild(productPrice);
+  productBody.appendChild(productDescription);
+
+  const ratingStars = Math.ceil(product.rating.rate);
+
+  ratingStars >= 1 && productBody.appendChild(ratingStar1);
+  ratingStars >= 2 && productBody.appendChild(ratingStar2);
+  ratingStars >= 3 && productBody.appendChild(ratingStar3);
+  ratingStars >= 4 && productBody.appendChild(ratingStar4);
+  ratingStars >= 5 && productBody.appendChild(ratingStar5);
+  productBody.appendChild(ratingCount);
+
+  productBody.appendChild(cardButtonOuter);
+  cardButtonOuter.appendChild(addToCartButton);
+  cardButtonOuter.appendChild(buyButton);
+
+  productsParentDiv.appendChild(colDiv);
+
+  addToCartButton.addEventListener('click', function (){
+    addToCart(product.id);
+    this.innerHTML = 'Added '
+    addToCartButton.style.backgroundColor='green' 
+  })
+};
 
 
-colDiv.classList="col-md-3"
-productDiv.classList="card product"
-productImg.classList="card-img-top"
-productBody.classList="card-body"
-productHeader.classList="product-header"
-productTitle.classList="card-title"
-productPrice.classList="card-title product-price"
-productDescription.classList="card-text"
-ratingStar1.classList="fa fa-star checked"
-ratingStar2.classList="fa fa-star checked"
-ratingStar3.classList="fa fa-star checked"
-ratingStar4.classList="fa fa-star checked"
-ratingStar5.classList="fa fa-star checked"
-ratingCount.classList='rating-count'
-cardButtonOuter.classList="btn-outer"
-addToCartButton.classList="btn btn-primary"
-buyButton.classList="btn btn-primary buy-btn"
-
-colDiv.id=`product-${product.id}`
-
-productTitle.innerText=`${product.title.slice(0,20)}...`
-productPrice.innerText=`$${product.price}`
-productDescription.innerText=`${product.description.slice(0,45)}...`
-ratingCount.innerText=`(${product.rating.count})`
-addToCartButton.innerText='Add to Cart'
-buyButton.innerText='Buy now'
-
-productImg.src=product.image
-productImg.alt='product-img'
-
-
-colDiv.appendChild(productDiv)
-productDiv.appendChild(productImg)
-productDiv.appendChild(productBody)
-productBody.appendChild(productHeader)
-productHeader.appendChild(productTitle)
-productHeader.appendChild(productPrice)
-productBody.appendChild(productDescription)
-productBody.appendChild(ratingStar1)
-productBody.appendChild(ratingStar2)
-productBody.appendChild(ratingStar3)
-productBody.appendChild(ratingStar4)
-productBody.appendChild(ratingStar5)
-productBody.appendChild(ratingCount)
-productBody.appendChild(cardButtonOuter)
-cardButtonOuter.appendChild(addToCartButton)
-cardButtonOuter.appendChild(buyButton)
-
-productsParentDiv.appendChild(colDiv)
-}
-
-
-const fetchProducts = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const data = await res.json();
-  console.log(data);
-  data.forEach(product => createProductDiv(product))
-  
-}
-
-{/* <div class="col-md-3">
+/* <div class="col-md-3">
 	<div class="card product">
 		<img src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
@@ -111,4 +110,4 @@ const fetchProducts = async () => {
 			</div>
 		</div>
 	</div>
-</div> */}
+</div> */
