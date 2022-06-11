@@ -83,6 +83,7 @@ const createProductDiv = (product) => {
 
   addToCartButton.addEventListener('click', function (){
     addToCart(product.id);
+    console.log('hello')
     this.innerHTML = 'Added '
     addToCartButton.style.backgroundColor='green' 
   })
