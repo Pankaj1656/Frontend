@@ -1,5 +1,12 @@
 const signUp=document.getElementById('signUp');
 
+let firstNameFeild=document.getElementById('firstName')
+let lastNameFeild=document.getElementById('lastName')
+let emailFeild=document.getElementById('inputEmail4')
+let passwordFeild=document.getElementById('inputPassword4')
+
+let firstNameValid=document.getElementsByClassName('valid-feedback')[0];
+let firstNameInvalid=document.getElementsByClassName('invalid-feedback')[0];
 signUp.addEventListener('click', ()=>{
     const jumbo=document.getElementById('jumbotron')
     const loading=document.getElementById('loading')
@@ -15,21 +22,28 @@ signUp.addEventListener('click', ()=>{
     loading.style.display='none'
 
     signUpPage.style.display='block'
+
 })
 
-const product=document.getElementById('product')
+function validate(){
+  if(firstNameFeild.length<=3){
+    firstNameValid.style.display='none'
+    firstNameInvalid.style.display='block'
+  }  
+}
 
-product.addEventListener('click',()=>{
-  const signUpPage=document.getElementById('signUp-page')
-  const jumbo=document.getElementById('jumbotron')
-  const loading=document.getElementById('loading')
-  const aboutUs=document.getElementById('aboutUs')
-  const contactUs=document.getElementById('contactUs')
-  const logInButton=document.getElementById('logInButton')
-  aboutUs.style.display='block'
-  contactUs.style.display='block'
-  logInButton.style.display='none'
-  signUpPage.style.display='none'
-  jumbo.style.display='block'
-  loading.style.display='block'
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

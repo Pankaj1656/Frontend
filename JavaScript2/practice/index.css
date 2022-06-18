@@ -1,0 +1,17 @@
+.signUpPage{
+    text-align: center;
+    margin: 200px;
+    border: 3px solid black;
+    border-radius: 10px;
+
+}
+.insideSignUp{
+    margin: 30px;
+}
+.signUpButton1{
+    font-family: cursive;
+    font-size: x-large;
+    background-color: bisque;
+    border-radius: 20px;
+    margin: 30px;
+}

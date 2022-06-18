@@ -85,7 +85,8 @@ const createProductDiv = (product) => {
     addToCart(product.id);
     console.log('hello')
     this.innerHTML = 'Added '
-    addToCartButton.style.backgroundColor='green' 
+    addToCartButton.style.backgroundColor='green'
+    this.classList.add('disabled') 
   })
 };
 

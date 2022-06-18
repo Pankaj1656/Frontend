@@ -53,17 +53,23 @@ const createItemsInCart = (cartItem) => {
 	
 
 	removeFromCart.addEventListener('click', function () {
-        let removeChild= cartItemsBody.removeChild(productDiv)
-       const addToCartButton=document.querySelectorAll('btn btn-primary addToCart-btn')
-	   
-		console.log(removeChild.id)
+         cartItemsBody.removeChild(productDiv)
 
 		 cartItemIds=cartItemIds.filter(cartItemId => cartItemId !=cartItem.id)
+
 		 cartItemsLength.innerText=cartItemIds.length
-		 if(cartItemsLength.innerText==0){
-			cartEmptyImg.style.display = 'inline-block'
+
+		 if(cartItemIds.length===0){
+			cartEmptyImg.style.display='inline-block'
 		 }
 
+		 let productColDiv=document.getElementById(`product-${cartItem.id}`)
+
+		 let requiredAddToCartButton=productColDiv.getElementsByClassName('addToCart-btn')[0]
+ 
+		 requiredAddToCartButton.innerText='Add to Cart'
+		 requiredAddToCartButton.style.backgroundColor='#0d6efd'
+		 requiredAddToCartButton.classList.remove('disabled')
 	})
 
 }

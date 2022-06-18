@@ -220,7 +220,7 @@ input {
   border: 10px solid black;
 }
 .card.product .cart-item-img{
-  padding:8%;
+  padding:15% 8%;
 }
 .card.product{
   padding-top: 0;
@@ -234,4 +234,7 @@ input {
 }
 #cart-items-body {
   text-align: center;
+}
+.nav-item:hover{
+  cursor: pointer;
 }

@@ -1,0 +1,21 @@
+.outer-box{
+    margin: 100px auto;
+    width: 700px;
+    border: 2px solid black;
+    
+}
+.inner-box{
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+    padding: 20px;
+}
+.inner-box h1{
+    font-size: large;
+    width: 200px;
+    margin: 15px;
+}
+.inner-box h2{
+    margin-right: 0;
+    margin-left: 20px;
+}
