@@ -21,6 +21,7 @@
     height: 90px;
     line-height: 70px;
     padding: 1;
+    font-family: sans-serif;
     font-size: 25px;
 }
 .btn:hover{

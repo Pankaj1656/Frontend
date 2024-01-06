@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./data.css"
+import "./data.css";
 
 class Data extends Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class Data extends Component {
             rate: 3.9,
             count: 120,
           },
+          inCart: true,
         },
         {
           id: 2,
@@ -33,6 +34,7 @@ class Data extends Component {
             rate: 4.1,
             count: 259,
           },
+          inCart: true,
         },
         {
           id: 3,
@@ -46,6 +48,7 @@ class Data extends Component {
             rate: 4.7,
             count: 500,
           },
+          inCart: true,
         },
         {
           id: 4,
@@ -59,6 +62,7 @@ class Data extends Component {
             rate: 2.1,
             count: 430,
           },
+          inCart: true,
         },
         {
           id: 5,
@@ -79,6 +83,7 @@ class Data extends Component {
             rate: 3,
             count: 400,
           },
+          inCart: true,
         },
         {
           id: 8,
@@ -93,6 +98,7 @@ class Data extends Component {
             rate: 1.9,
             count: 100,
           },
+          inCart: true,
         },
         {
           id: 9,
@@ -106,6 +112,7 @@ class Data extends Component {
             rate: 3.3,
             count: 203,
           },
+          inCart: true,
         },
         {
           id: 10,
@@ -119,20 +126,43 @@ class Data extends Component {
             rate: 2.9,
             count: 470,
           },
+          inCart: true,
         },
       ],
+      status: true,
     };
+  }
+
+  DeleteButton = (cartItemID) => {
+    let updatedCartItems=this.state.cartItems.map(cartItem=>{
+      if(cartItem.id===cartItemID)
+      cartItem.inCart=false
+      return cartItem
+    })
+    this.setState({
+      cartItems:updatedCartItems
+    })
   }
   render() {
     let { cartItems } = this.state;
     return (
-      <div className="outer-box">
-        {cartItems.map((cartItem) => (
-          <div className="inner-box">
-            
-            <img src={cartItem.image} alt="cart-item" height={300} width={300} />
-            <h1>{cartItem.title}</h1>
-            <h2>{cartItem.price}</h2>
+      <div className="cart-outer">
+        <h1>Cart Item ({cartItems.filter(cartItem=>cartItem.inCart).length})</h1>
+        {cartItems.filter(cartItem => cartItem.inCart).map((cartItem) => (
+          <div className="cart-item">
+            <img
+              src={cartItem.image}
+              alt="cart-item"
+              height={300}
+              width={300}
+              className="cart-item-image"
+            />
+
+            <div className="cart-item-details">
+              <h4>{cartItem.title}</h4>
+              <h2>${cartItem.price}</h2>
+              <button className="remove-from-cart-btn" onClick={()=>this.DeleteButton(cartItem.id)} >Remvove from Cart</button>
+            </div>
           </div>
         ))}
       </div>
